@@ -9,11 +9,16 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
+      path: '/', redirect: { name: 'home' }
+    },
+    {
       path: '/login',
+      name: 'login',
       component: Login,
     },
     {
       path: '/home',
+      name: 'home',
       component: () => import(/* webpackChunkName: "home" */ './views/home/Home.vue'),
       beforeEnter: guard,
       children: [
