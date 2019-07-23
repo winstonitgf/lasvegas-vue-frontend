@@ -5,11 +5,15 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    isLogin: false
+    isLogin: false,
+    authUser: null,
   },
   mutations: {
     setLogin(state) {
       state.isLogin = true;
+    },
+    setAuthUser(state, payload) {
+      state.authUser = payload;
     }
   },
   actions: {

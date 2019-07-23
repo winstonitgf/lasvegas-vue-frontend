@@ -64,7 +64,7 @@
 
 
 <script>
-import { apiUserLogin, apiOtpValidate } from "@/utilities/api.js";
+import { apiUserLogin, apiOtpValidate } from "@/utilities/oauth-api.js";
 export default {
   name: "login",
   components: {},

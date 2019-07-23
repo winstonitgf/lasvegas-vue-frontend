@@ -1,4 +1,4 @@
-import { apiValidateToken } from '@/utilities/api.js';
+import { apiValidateToken } from '@/utilities/oauth-api.js';
 import store from '@/store.js';
 
 export default function (to, from, next) {
@@ -15,7 +15,6 @@ export default function (to, from, next) {
     // 檢查token是否合法，否則回到登入畫面
     apiValidateToken({ apiToken: token })
       .then(res => {
-        console.log(res);
         store.commit('setLogin')
         next();
       })

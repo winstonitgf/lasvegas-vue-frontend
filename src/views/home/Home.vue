@@ -75,15 +75,18 @@ export default {
       toolbarUserItems: [
         {
           id: 1,
-          text: "資訊"
+          text: "資訊",
+          type: "info"
         },
         {
           id: 2,
-          text: "密碼"
+          text: "密碼",
+          type: "password"
         },
         {
           id: 3,
-          text: "退出"
+          text: "退出",
+          type: "logout"
         }
       ],
       navItems: [
