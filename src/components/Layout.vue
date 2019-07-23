@@ -125,16 +125,14 @@
         </v-list>
       </v-navigation-drawer>
       <v-content>
-        <v-container fluid fill-height>
-          <v-layout>
-            <v-flex shrink>
-              <div>
-                <v-breadcrumbs :items="breadcrumbItems" divider=">"></v-breadcrumbs>
-              </div>
-              <router-view></router-view>
-            </v-flex>
-          </v-layout>
-        </v-container>
+        <v-layout>
+          <v-flex shrink>
+            <div>
+              <v-breadcrumbs :items="breadcrumbItems" divider=">"></v-breadcrumbs>
+            </div>
+            <router-view></router-view>
+          </v-flex>
+        </v-layout>
       </v-content>
       <v-footer color="blue-grey" class="white--text" app>
         <span>Vuetify</span>
