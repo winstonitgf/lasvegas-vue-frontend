@@ -23,14 +23,14 @@ export default new Router({
       beforeEnter: guard,
       children: [
         {
-          path: 'hot-sport',
-          name: 'hot-sport',
-          component: () => import(/* webpackChunkName: "hot-sport" */ './views/home/HotSport.vue'),
+          path: 'sport-schedule',
+          name: 'sport-schedule',
+          component: () => import(/* webpackChunkName: "sport-schedule" */ './views/home/SportSchedule.vue'),
         },
         {
-          path: 'running-ball',
-          name: 'running-ball',
-          component: () => import(/* webpackChunkName: "running-ball" */ './views/home/RunningBall.vue'),
+          path: 'sport-result',
+          name: 'sport-result',
+          component: () => import(/* webpackChunkName: "sport-result" */ './views/home/SportResult.vue'),
         },
       ],
     },

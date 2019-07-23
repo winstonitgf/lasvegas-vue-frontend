@@ -108,7 +108,11 @@
               </v-list-tile>
             </template>
 
-            <v-list-tile v-for="subItem in item.items" :key="subItem.title">
+            <v-list-tile
+              @click="goRoute(subItem.path)"
+              v-for="subItem in item.items"
+              :key="subItem.title"
+            >
               <v-list-tile-content>
                 <v-list-tile-title>{{ subItem.title }}</v-list-tile-title>
               </v-list-tile-content>
@@ -223,7 +227,7 @@ export default {
         .then(res => {
           localStorage.removeItem("api_token");
           this.logoutDialog = false;
-          this.goRoute("login");
+          this.goRoute("/login");
           console.log(res);
         })
         .catch(err => {

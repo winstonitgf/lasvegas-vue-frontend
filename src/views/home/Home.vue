@@ -96,18 +96,18 @@ export default {
           title: "體育賽事",
           active: true,
           items: [
-            { title: "賽程" },
-            { title: "賽果(比分)" },
-            { title: "注單(按注單)" },
-            { title: "注單(按用戶)" },
-            { title: "報表" }
+            { title: "賽程", path: "/home/sport-schedule" },
+            { title: "賽果(比分)", path: "/home/sport-result" },
+            { title: "注單(按注單)", path: "/home/sport-schedule" },
+            { title: "注單(按用戶)", path: "/home/sport-schedule" },
+            { title: "報表", path: "/home/sport-schedule" }
           ]
         },
         {
           id: 2,
           action: "autorenew",
           title: "額度轉移",
-          items: [{ title: "轉入轉出" }]
+          items: [{ title: "轉入轉出", path: "/home/sport-schedule" }]
         }
       ],
       breadcrumbItems: [

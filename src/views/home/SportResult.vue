@@ -1,12 +1,12 @@
 <template>
   <div>
-    <h1>This is an hot sport page</h1>
+    <h1>This is an SportResult page</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: "hot-sport",
+  name: "sport-result",
   components: {},
   data: () => ({}),
   props: {},
