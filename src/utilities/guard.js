@@ -1,4 +1,4 @@
-import { apiValidateToken } from '@/utilities/oauth-api.js';
+import { apiValidateToken } from '@/services/oauth-api.js';
 import store from '@/store.js';
 
 export default function (to, from, next) {

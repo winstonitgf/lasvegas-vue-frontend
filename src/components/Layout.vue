@@ -1,5 +1,11 @@
 <template>
   <div id="app">
+    <v-progress-linear
+      style="z-index:999;margin:0"
+      color="error"
+      height="3"
+      :indeterminate="$store.state.isLoading"
+    ></v-progress-linear>
     <v-app id="inspire">
       <v-navigation-drawer fixed v-model="drawerRight" right clipped app>
         <v-list dense>
@@ -172,7 +178,7 @@
 </template>
 
 <script>
-import { apiAuthUser, apiLogout } from "@/utilities/oauth-api.js";
+import { apiAuthUser, apiLogout } from "@/services/oauth-api.js";
 export default {
   name: "home-layout",
   data: () => ({
