@@ -88,10 +88,12 @@ export default {
               this.$router.push("/home");
             })
             .catch(err => {
+              alert(err.response.statusText);
               console.log(err);
             });
         })
         .catch(err => {
+          alert(err.response.statusText);
           console.log(err);
         });
     }
