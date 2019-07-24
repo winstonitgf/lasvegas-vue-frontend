@@ -2,6 +2,7 @@
   <div id="app">
     <v-progress-linear
       style="z-index:999;margin:0"
+      v-if="$store.state.isLoading"
       color="error"
       height="3"
       :indeterminate="$store.state.isLoading"
@@ -126,7 +127,7 @@
       </v-navigation-drawer>
       <v-content>
         <v-layout>
-          <v-flex shrink>
+          <v-flex>
             <div>
               <v-breadcrumbs :items="breadcrumbItems" divider=">"></v-breadcrumbs>
             </div>
@@ -180,7 +181,7 @@
 </template>
 
 <script>
-import { apiAuthUser, apiLogout } from "@/services/oauth-api.js";
+import { apiAuthUser, apiLogout } from "@/apis/oauth-api.js";
 export default {
   name: "home-layout",
   data: () => ({
@@ -188,7 +189,7 @@ export default {
     infoDialog: false,
     passwordDialog: false,
     drawerLeft: null,
-    drawerRight: null,
+    drawerRight: false,
     userName: null
   }),
   props: {

@@ -18,10 +18,14 @@ export default new Router({
     },
     {
       path: '/home',
-      name: 'home',
       component: () => import(/* webpackChunkName: "home" */ './views/home/Home.vue'),
       beforeEnter: guard,
       children: [
+        {
+          path: '/',
+          name: 'home',
+          component: () => import(/* webpackChunkName: "index" */ './views/home/Index.vue'),
+        },
         {
           path: 'sport-schedule',
           name: 'sport-schedule',
