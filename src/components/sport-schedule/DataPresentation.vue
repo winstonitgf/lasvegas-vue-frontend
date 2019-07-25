@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: "sport-result-datapresentation",
+  name: "sport-schedule-datapresentation",
   data: () => ({
     headers: [
       {

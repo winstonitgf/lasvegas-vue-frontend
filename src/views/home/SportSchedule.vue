@@ -1,13 +1,19 @@
 <template>
   <div>
-    <h1>This is an SportSchedule page</h1>
+    <criteria></criteria>
+    <data-presentation></data-presentation>
   </div>
 </template>
 
 <script>
+import Criteria from "@/components/sport-schedule/Criteria.vue";
+import DataPresentation from "@/components/sport-schedule/DataPresentation.vue";
 export default {
   name: "sport-schedule",
-  components: {},
+  components: {
+    Criteria,
+    DataPresentation
+  },
   data: () => ({}),
   props: {},
   methods: {}

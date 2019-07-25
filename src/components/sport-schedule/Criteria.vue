@@ -1,11 +1,7 @@
 <template>
   <div>
-    <div>
-      <v-btn style="margin:2px;" v-for="(value, index) in sportList" v-bind:key="index">
-        <span>{{ value.text }}</span>
-      </v-btn>
-    </div>
     <div style="display:inline-flex">
+      <v-select :items="items" style="width: 20%;margin-left:5px;" label="類型"></v-select>
       <v-menu
         v-model="menu2"
         :close-on-content-click="false"
@@ -17,17 +13,18 @@
       >
         <template v-slot:activator="{ on }">
           <v-text-field
-            style="width: 20%;"
-            v-model="date"
+            style="width: 20%;margin-left:5px;"
             label="日期"
             prepend-icon="event"
             readonly
             v-on="on"
           ></v-text-field>
         </template>
-        <v-date-picker v-model="date" @input="menu2 = false"></v-date-picker>
+        <v-date-picker @input="menu2 = false"></v-date-picker>
       </v-menu>
-      <v-btn color="primary" style="margin-left:5px;margin-top:10px;">
+
+      <v-select style="width: 20%;margin-left:5px;" :items="items" label="注額"></v-select>
+      <v-btn style="margin-left:5px;margin-top:10px;">
         <span>查詢</span>
       </v-btn>
     </div>
@@ -36,14 +33,12 @@
 
 <script>
 export default {
-  name: "sport-result-criteria",
+  name: "sport-schedule-schedule",
   data: () => ({
-    menu2: false,
-    date: new Date().toISOString().substr(0, 10)
+    items: ["Foo", "Bar", "Fizz", "Buzz"],
+    menu2: false
   }),
-  props: {
-    sportList: Array
-  },
+  props: {},
   methods: {}
 };
 </script>
