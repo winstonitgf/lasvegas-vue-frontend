@@ -1,5 +1,6 @@
 <template>
   <v-app id="inspire">
+    <v-progress-linear style="z-index:999" v-if="$store.state.isLoading" indeterminate color="cyan"></v-progress-linear>
     <v-navigation-drawer v-model="drawerRight" app clipped right>
       <v-list dense>
         <v-list-item>
