@@ -98,7 +98,7 @@ export default {
           items: [
             { title: "賽程", path: "/home/sport-schedule" },
             { title: "賽果(比分)", path: "/home/sport-result" },
-            { title: "注單(按注單)", path: "/home/sport-schedule" },
+            { title: "注單(按注單)", path: "/home/sport-order" },
             { title: "注單(按用戶)", path: "/home/sport-schedule" },
             { title: "報表", path: "/home/sport-schedule" }
           ]

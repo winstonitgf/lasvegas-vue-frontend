@@ -131,8 +131,8 @@
         <v-card-text>退出前請先確認所有操作都已儲存成功!</v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
-          <v-btn color="grey darken-1" @click="logoutDialog = false">不要退出</v-btn>
-          <v-btn color="red darken-1" @click="logout">確定退出</v-btn>
+          <v-btn text color="grey darken-1" @click="logoutDialog = false">不要退出</v-btn>
+          <v-btn text color="red darken-1" @click="logout">確定退出</v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>
@@ -143,8 +143,8 @@
         <v-card-text>這裡是修改資料的地方</v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
-          <v-btn color="grey darken-1" @click="infoDialog = false">不要修改</v-btn>
-          <v-btn color="red darken-1" @click="infoDialog = false">確定修改</v-btn>
+          <v-btn text color="grey darken-1" @click="infoDialog = false">不要修改</v-btn>
+          <v-btn text color="red darken-1" @click="infoDialog = false">確定修改</v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>
@@ -155,8 +155,8 @@
         <v-card-text>這裡是修改密碼的地方!</v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
-          <v-btn color="grey darken-1" @click="passwordDialog = false">不要修改</v-btn>
-          <v-btn color="red darken-1" @click="passwordDialog = false">確定修改</v-btn>
+          <v-btn text color="grey darken-1" @click="passwordDialog = false">不要修改</v-btn>
+          <v-btn text color="red darken-1" @click="passwordDialog = false">確定修改</v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>
@@ -192,7 +192,13 @@ export default {
         console.log(err.response.statusText);
       });
   },
+  timers: {
+    log: { time: 10000, autostart: true, repeat: true }
+  },
   methods: {
+    log() {
+      console.log("Hello world");
+    },
     openDialog(type) {
       if (type == "logout") {
         this.logoutDialog = true;

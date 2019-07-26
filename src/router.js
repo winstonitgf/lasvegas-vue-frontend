@@ -36,6 +36,11 @@ export default new Router({
           name: 'sport-result',
           component: () => import(/* webpackChunkName: "sport-result" */ './views/home/SportResult.vue'),
         },
+        {
+          path: 'sport-order',
+          name: 'sport-order',
+          component: () => import(/* webpackChunkName: "sport-order" */ './views/home/SportOrder.vue'),
+        },
       ],
     },
   ],
