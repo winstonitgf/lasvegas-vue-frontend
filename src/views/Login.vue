@@ -26,7 +26,7 @@
               <v-card-text>
                 <v-form>
                   <v-text-field
-                    v-model="loginInfo.email"
+                    v-model="loginInfo.account"
                     prepend-icon="person"
                     name="login"
                     label="Login"
@@ -70,7 +70,7 @@ export default {
   components: {},
   data: () => ({
     loginInfo: {
-      email: "farmstrong@example.net",
+      account: "skyheart",
       password: "12345"
     },
     otpCode: {

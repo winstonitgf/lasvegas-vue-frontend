@@ -1,0 +1,8 @@
+export const TOOLBAR_MENU = {
+  RIGHT_MENU: 'RIGHT_MENU',
+  LEFT_MENU: 'LEFT_MENU'
+}
+
+export const LOADING_PROCCESS = {
+  PROCCESS: "PROCCESS"
+}
