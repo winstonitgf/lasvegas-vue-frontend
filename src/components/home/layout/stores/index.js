@@ -4,12 +4,18 @@ const state = {
   drawerLeft: false,
   drawerRight: false,
   loading: false,
+  logoutDialog: false,
+  informationDialog: false,
+  passwordDialog: false,
 }
 
 const getters = {
   drawerLeft: state => state.drawerLeft,
   drawerRight: state => state.drawerRight,
   loading: state => state.loading,
+  logoutDialog: state => state.logoutDialog,
+  informationDialog: state => state.informationDialog,
+  passwordDialog: state => state.passwordDialog,
 }
 
 const actions = {
@@ -19,8 +25,17 @@ const actions = {
   rightMenuClick({ commit }) {
     commit(types.TOOLBAR_MENU.RIGHT_MENU)
   },
-  LoadingProccess({ commit }) {
+  loadingProccess({ commit }) {
     commit(types.LOADING_PROCCESS.PROCCESS)
+  },
+  logoutDialogClick({ commit }) {
+    commit(types.DIALOG.LOGOUT)
+  },
+  informationDialogClick({ commit }) {
+    commit(types.DIALOG.INFORMATION)
+  },
+  passwordDialogClick({ commit }) {
+    commit(types.DIALOG.PASSWORD)
   },
 }
 
@@ -33,6 +48,15 @@ const mutations = {
   },
   [types.LOADING_PROCCESS.PROCCESS](state) {
     state.loading = !state.loading;
+  },
+  [types.DIALOG.LOGOUT](state) {
+    state.logoutDialog = !state.logoutDialog;
+  },
+  [types.DIALOG.INFORMATION](state) {
+    state.informationDialog = !state.informationDialog;
+  },
+  [types.DIALOG.PASSWORD](state) {
+    state.passwordDialog = !state.passwordDialog;
   }
 }
 

@@ -1,43 +1,14 @@
+import Vue from 'vue'
+import Vuex from 'vuex'
+import layout from '@/components/home/layout/stores/index.js'
+import auth from '@/stores/auth/index.js'
 
+Vue.use(Vuex)
 
-// import Vue from 'vue'
-// import Vuex from 'vuex'
-// import { state, actions, mutations } from './store/root.js'
-
-// Vue.use(Vuex)
-
-// export default new Vuex.Store({
-//   state,
-//   mutations,
-//   actions,
-//   modules: {},
-//   strict: true
-// })
-
-
-// import Vue from 'vue';
-// import Vuex from 'vuex';
-
-// Vue.use(Vuex);
-
-// export default new Vuex.Store({
-//   state: {
-//     isLogin: false,
-//     authUser: null,
-//     isLoading: false
-//   },
-//   mutations: {
-//     setLogin(state) {
-//       state.isLogin = true;
-//     },
-//     setAuthUser(state, payload) {
-//       state.authUser = payload;
-//     },
-//     setLoading(state) {
-//       state.isLoading = !state.isLoading;
-//     }
-//   },
-//   actions: {
-
-//   },
-// });
+export default new Vuex.Store({
+  modules: {
+    layout: layout,
+    auth: auth
+  },
+  strict: process.env.NODE_ENV !== 'production'
+})

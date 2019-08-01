@@ -6,3 +6,11 @@ export const TOOLBAR_MENU = {
 export const LOADING_PROCCESS = {
   PROCCESS: "PROCCESS"
 }
+
+export const DIALOG = {
+  LOGOUT: "LOGOUT",
+  INFORMATION: "INFORMATION",
+  PASSWORD: "PASSWORD",
+}
+
+

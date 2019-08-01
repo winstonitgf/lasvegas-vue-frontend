@@ -18,7 +18,7 @@ export default new Router({
     },
     {
       path: '/home',
-      component: () => import(/* webpackChunkName: "home" */ './views/home/HomeTest.vue'),
+      component: () => import(/* webpackChunkName: "home" */ './views/home/Layout.vue'),
       beforeEnter: guard,
       children: [
         {

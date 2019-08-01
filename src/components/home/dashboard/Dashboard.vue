@@ -19,7 +19,7 @@
 
 <script>
 export default {
-  name: "dashboard",
+  name: "app-home-dashboard",
   data: () => ({}),
   props: {
     dashboardDatas: Array

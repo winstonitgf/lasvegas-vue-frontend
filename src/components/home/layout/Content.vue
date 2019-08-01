@@ -19,29 +19,10 @@ const { mapGetters } = createNamespacedHelpers("layout");
 
 export default {
   name: "lasvegas-layout-content",
-  data: () => ({
-    breadcrumbItems: [
-      {
-        id: 1,
-        text: "首頁",
-        disabled: false,
-        href: "breadcrumbs_dashboard"
-      },
-      {
-        id: 2,
-        text: "體育賽事",
-        disabled: false,
-        href: "breadcrumbs_link_1"
-      },
-      {
-        id: 3,
-        text: "賽程",
-        disabled: true,
-        href: "breadcrumbs_link_2"
-      }
-    ]
-  }),
-  props: {},
+  data: () => ({}),
+  props: {
+    breadcrumbItems: Array
+  },
   methods: {},
   computed: {}
 };

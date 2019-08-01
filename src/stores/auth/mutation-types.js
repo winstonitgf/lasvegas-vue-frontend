@@ -1,0 +1,4 @@
+export const USER = {
+  SET_AUTH_USER: 'SET_AUTH_USER',
+  SET_LOGIN: 'SET_LOGIN'
+}

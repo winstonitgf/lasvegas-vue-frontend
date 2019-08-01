@@ -5,9 +5,9 @@
 </template>
 
 <script>
-import Dashboard from "@/components/Dashboard.vue";
+import Dashboard from "@/components/home/dashboard/Dashboard.vue";
 export default {
-  name: "index",
+  name: "lasvegas-app-index",
   components: {
     Dashboard
   },

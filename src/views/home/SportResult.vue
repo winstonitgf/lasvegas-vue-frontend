@@ -6,10 +6,10 @@
 </template>
 
 <script>
-import Criteria from "@/components/sport-result/Criteria.vue";
-import DataPresentation from "@/components/sport-result/DataPresentation.vue";
+import Criteria from "@/components/home/sport-result/Criteria.vue";
+import DataPresentation from "@/components/home/sport-result/DataPresentation.vue";
 export default {
-  name: "sport-result",
+  name: "lasvegas-app-layout-sport-result",
   components: {
     Criteria,
     DataPresentation

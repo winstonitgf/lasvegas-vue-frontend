@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: "sport-order",
+  name: "lasvegas-app-sport-order",
   timers: {
     log: { time: 1000, autostart: true, repeat: true }
   },

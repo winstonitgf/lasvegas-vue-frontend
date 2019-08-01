@@ -6,10 +6,10 @@
 </template>
 
 <script>
-import Criteria from "@/components/sport-schedule/Criteria.vue";
-import DataPresentation from "@/components/sport-schedule/DataPresentation.vue";
+import Criteria from "@/components/home/sport-schedule/Criteria.vue";
+import DataPresentation from "@/components/home/sport-schedule/DataPresentation.vue";
 export default {
-  name: "sport-schedule",
+  name: "lasvegas-app-layout-sport-schedule",
   components: {
     Criteria,
     DataPresentation

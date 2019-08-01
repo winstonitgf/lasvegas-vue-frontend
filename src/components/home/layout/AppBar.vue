@@ -3,7 +3,7 @@
     <v-app-bar app clipped-right clipped-left color="blue-grey" dark>
       <v-app-bar-nav-icon @click.stop="leftMenuClick"></v-app-bar-nav-icon>
       <v-toolbar-title>娛樂城後台管理系統</v-toolbar-title>
-      <v-toolbar-title style="margin-left:20px;">{{ userName }}</v-toolbar-title>
+      <v-toolbar-title style="margin-left:20px;">歡迎回來 {{ userName }}</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-menu offset-y open-on-hover :nudge-width="150">
         <template v-slot:activator="{ on }">
@@ -74,8 +74,22 @@ export default {
   methods: {
     ...mapActions({
       leftMenuClick: "leftMenuClick",
-      rightMenuClick: "rightMenuClick"
-    })
+      rightMenuClick: "rightMenuClick",
+      logoutDialogClick: "logoutDialogClick",
+      informationDialogClick: "informationDialogClick",
+      passwordDialogClick: "passwordDialogClick"
+    }),
+    openDialog(type) {
+      if (type == "logout") {
+        this.logoutDialogClick();
+      }
+      if (type == "info") {
+        this.informationDialogClick();
+      }
+      if (type == "password") {
+        this.passwordDialogClick();
+      }
+    }
   }
 };
 </script>
