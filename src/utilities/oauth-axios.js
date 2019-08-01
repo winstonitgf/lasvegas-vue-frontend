@@ -1,12 +1,12 @@
 import axios from 'axios';
 import store from '@/store.js';
+import { loadingStoreActionPath } from './config';
 
 // OAUTH 相關 api
 const oauthRequest = axios.create({
   baseURL: 'http://localhost:8000/'
 });
 
-const loadingStoreActionPath = 'layout/loadingProccess';
 
 oauthRequest.interceptors.request.use(function (config) {
   store.dispatch(loadingStoreActionPath);

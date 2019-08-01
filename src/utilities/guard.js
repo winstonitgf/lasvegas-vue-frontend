@@ -1,8 +1,6 @@
 import { apiValidateToken } from '@/apis/oauth-api.js';
 import store from '@/store.js';
-
-const storeAuthIsLogingPath = 'auth/isLogin';
-const storeAuthSetLogingPath = 'auth/setLogin';
+import { storeAuthIsLogingPath, storeAuthSetLogingPath } from './config';
 
 export default function (to, from, next) {
   // 先看一下 login status 的狀態，如果已登入過就直接通過

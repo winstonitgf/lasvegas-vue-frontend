@@ -6,6 +6,7 @@
 <script>
 import { apiUserLogin, apiOtpValidate } from "@/apis/oauth-api.js";
 import AppForm from "@/components/login/Form.vue";
+
 export default {
   name: "login",
   components: {
@@ -36,8 +37,8 @@ export default {
             });
         })
         .catch(err => {
-          alert(err.response.statusText);
           console.log(err);
+          alert(err.response.statusText);
         });
     }
   }
