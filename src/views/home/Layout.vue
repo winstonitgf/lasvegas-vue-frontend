@@ -4,11 +4,11 @@
     <app-bar :userName="userName" :toolbarItems="toolbarItems"></app-bar>
     <app-content :breadcrumbItems="breadcrumbItems"></app-content>
     <drawer-right></drawer-right>
-    <drawer-left :navItems="navItems"></drawer-left>
+    <drawer-left :navItems="navItems" @goRoute="navigateRoute"></drawer-left>
     <app-footer></app-footer>
-    <information-dialog></information-dialog>
+    <information-dialog @confirm="informationDialogConfirm"></information-dialog>
     <logout-dialog @logout="logout"></logout-dialog>
-    <password-dialog></password-dialog>
+    <password-dialog @confirm="passwordDialogConfirm"></password-dialog>
   </v-app>
 </template>
 
@@ -200,8 +200,17 @@ export default {
           console.log("登出失敗");
         });
     },
+    informationDialogConfirm() {
+      alert("資訊修改成功");
+    },
+    passwordDialogConfirm() {
+      alert("密碼修改成功");
+    },
     log() {
       console.log("Hello world");
+    },
+    navigateRoute(path) {
+      goRoute(path);
     }
   }
 };

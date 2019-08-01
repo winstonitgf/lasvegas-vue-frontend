@@ -45,7 +45,11 @@ export default {
   props: {
     navItems: Array
   },
-  methods: {},
+  methods: {
+    goRoute(path) {
+      this.$emit("goRoute", path);
+    }
+  },
   computed: {
     ...mapGetters({
       drawerLeft: "drawerLeft"
